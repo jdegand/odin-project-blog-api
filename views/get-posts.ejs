@@ -1,0 +1,5 @@
+<%- include('partials/header.ejs') %>
+<% if(posts) { %>
+    <div>Total Posts: <%= posts.length %></div>
+    <div><%= JSON.stringify(posts, null, 2) %></div>
+<% } %>

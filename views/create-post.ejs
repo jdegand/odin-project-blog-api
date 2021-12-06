@@ -1,0 +1,12 @@
+<%- include('partials/header.ejs') %>
+<form action="/api/posts/create" method="post">
+    <label for="title">Title: </label>
+    <input type="text" name="title" placeholder="Title" required>
+    <label for="body">Content: </label>
+    <textarea type="text" placeholder="Post Content" name="body" maxlength="100" required></textarea>
+    <input type="radio" id="publish" name="published" value="true">
+    <label for="publish">Publish</label>
+    <input type="radio" id="unpublish" name="published" value="false">
+    <label for="unpublish">Unpublish</label>
+    <button type="submit">Submit</button>
+</form>

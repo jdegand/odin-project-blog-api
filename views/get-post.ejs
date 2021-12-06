@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs') %>
+<% if(post) { %>
+    <div>
+        <h1><%= post.title %></h1>
+        <div><%= post.body %></div>
+        <div><%= post.published %></div>
+    </div>
+    <a href="/api/posts/<%= post._id %>/update">Update</a>
+
+    <form action="/api/posts/<%= post._id %>/delete" method="post">
+        <button type="submit">Delete</button>
+    </form>
+
+<% } else { %>
+    <div>No Posts match that id</div>
+<% } %>
